@@ -1,0 +1,118 @@
+{% extends "SER/base.html"%}
+{% block content %}
+        <div>
+            <div class="main-container">
+                <div class="project-info-container">
+                    <div class="title">
+                        <h1 class="first-line">SPEECH EMOTION</h1>
+                        <h1 class="second-line">RECOGNITION</h1>
+                        <hr>
+                    </div>
+                    <div>
+                        <div class="content">
+                            <p>Speech is the most natural way of 
+                                expressing ourselves as humans. Speech Emotion Recognition (SER) 
+                                is the process of extracting the emotional state of the speaker from his or her speech signal. SER is not a 
+                                new field. It seems amazing and interesting to know
+                                the emotion of our speech right??? So why don't you try it by 
+                                yourself...............</p>
+                            <h3>It's Really Fun</h3>
+                        </div>
+                        <div class="btn-container">
+                            <button class="btn" onclick="btnClicked()">Try Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="emoji-container">
+                    <div class="emoji">
+                        <img src="../static/SER/assets/angry.svg" alt=""/>
+                        <img src="../static/SER/assets/disgust.jpg" alt=""/>
+                        <img src="../static/SER/assets/fear.jpg" alt=""/>
+                        <img src="../static/SER/assets/happy.jpg" alt=""/>
+                        <img src="../static/SER/assets/neutral.png" alt=""/>
+                        <img src="../static/SER/assets/sad.png" alt=""/>
+                        <img src="../static/SER/assets/surprise.jpg" alt="" />
+                    </div>
+                    <div>
+                        <img src="../static/SER/assets/giphy.gif" alt="" class="center-emoji"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="section-two-main-container">
+            <h1 class="section-two-title" id="about-model">About Model</h1>
+            <p class="about-content">
+                Speech Emotion Recognition is based on the Convolution Neural Network (CNN) algorithm which uses different modules
+                for the emotion recognition and the classifiers are used to differentiate emotions such as happiness, surprise, anger, neutral state, sadness etc.
+                The dataset for the speech emotion recognition system is the speech samples and the characteristics are extracted from these speech samples using LIBROSA package.
+                In fact, the emotional feature extraction is a main issue in the SER system. The important speech features contains emotion information such as energy, pitch, formant frequency,
+                Linear Prediction Cepstral Coeeficients (LPCC), Mel-Frequency Cepstral Coefficient (MFCC) and Modulation Spectral Features (MSFs).
+                Here, we extracted the MFCC features of any speech and by using it we specify the emotion of an individual by using CNN model.
+
+            </p>
+        </div>
+
+            <div class="section-three-main-container" id="developer">
+                <h1 class="section-three-title">Developers</h1>
+                <div class="cardview-container">
+                    <div class="developer-info-container">
+                        <div class="developer-img">
+                            <img src="../static/SER/assets/007.jpg" alt="Ajaya" />
+                        </div>
+                        <span class="developer-name">Ajaya Thakur</span>
+                        <h4>Ittachhen, Bhaktapur</h4>
+                        <p class="developer-description">Studying in Khwopa College of Engineering</p>
+                        <span>Email : ajayathakur383@gmail.com</span>
+                    </div>
+
+                    <div class="developer-info-container">
+                        <div class="developer-img">
+                            <img src="../static/SER/assets/041.jpg" alt="Shreejan" />
+                        </div>
+                        <span class="developer-name">Shreejan Kisi</span>
+                        <h4>Golmadhi, Bhaktapur</h4>
+                        <p class="developer-description">Studying in Khwopa College of Engineering</p>
+                        <span>Email : shreejan.kisee005@gmail.com</span>
+                    </div>
+
+                    <div class="developer-info-container">
+                        <div class="developer-img">
+                            <img src="../static/SER/assets/048.jpg" alt="Sushil"/>
+                        </div>
+                        <span class="developer-name">Sushil Dyopala</span>
+                        <h4>Kalopati, Bhaktapur</h4>
+                        <p class="developer-description">Studying in Khwopa College of Engineering</p>
+                        <span>Email : dyopalasushil123@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+
+        <div class="section-four-main-container">
+            <div class="wrapper">
+                <div class="section-four-title">
+                    <h1>Follow Us</h1>
+                </div>
+                <div class="icon">
+                    <a href=""><img src="../static/SER/assets/email_logo.svg" alt="email"/></a>
+                    <a href=""><img src="../static/SER/assets/linkedin_logo.svg" alt="linkedin"/></a>
+                </div>
+            </div>
+        </div>
+
+        <footer style="background-color:black; color:white; text-align: center;">
+            Copyright &copy; 2020
+    </footer>
+
+
+    <script>
+        function btnClicked(){
+            document.location.href= "{% url 'record' %}"
+        }
+    </script>
+
+{% endblock content %}

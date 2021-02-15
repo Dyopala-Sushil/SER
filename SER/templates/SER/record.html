@@ -1,0 +1,61 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="./assets/logo.png">
+    <link rel="stylesheet" type="text/CSS" href="{% static 'SER/CSS/button.css' %}">
+    <title>Record</title>
+</head>
+<body>   
+    <div class="wrapper">
+        <h1>{{result}}</h1>
+        <!-- <form action="record" method="POST">
+
+      
+          <audio id="player" controls name = "audio_clip">Audio</audio>
+      </form> -->
+      <input type="file" accept="audio/*" capture>
+    </div>
+</body>
+
+<!-- <script>
+    const player = document.getElementById('player');
+  
+    const handleSuccess = function(stream) {
+      if (window.URL) {
+        player.srcObject = stream;
+      } else {
+        player.src = stream;
+      }
+    };
+
+    const mediaRecorder = new MediaRecorder(stream, options);
+
+    mediaRecorder.addEventListener('dataavailable', function(e) {
+      if (e.data.size > 0) {
+        recordedChunks.push(e.data);
+      }
+
+      if(shouldStop === true && stopped === false) {
+        mediaRecorder.stop();
+        stopped = true;
+      }
+    });
+
+    mediaRecorder.addEventListener('stop', function() {
+      downloadLink.href = URL.createObjectURL(new Blob(recordedChunks));
+      downloadLink.download = 'acetest.wav';
+    });
+
+    mediaRecorder.start();
+  
+    navigator.mediaDevices.getUserMedia({ audio: true, video: false })
+        .then(handleSuccess);
+  </script> -->
+
+  
+
+</html>

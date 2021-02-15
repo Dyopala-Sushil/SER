@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feel Your Speech</title>
+    <link rel="shortcut icon" type="image/png" href="{% static 'SER/assets/logo.png'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'SER/CSS/main.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Texturina&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-bar">
+                <div class="logo-container">
+                    <img class="logo" src="../static/SER/assets/logo.png" alt="SER logo"/>
+                </div>
+                <div class="nav-menu-bar-container">
+                    <ul class="nav-menu-bar">
+                        <li><a class="no-text-deco nav-option" href="{% url 'home' %}">Home</a></li>
+                        <li><a class="no-text-deco nav-option" href="#about-model">About Model</a></li>
+                        <li><a class="no-text-deco nav-option" href="#developer">Developer</a></li>                  
+                        <li><a class="no-text-deco nav-option" href="#contact-us">Contact Us</a></li>                  
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    {% block content %}
+    {% endblock%}
+</body>
+</html>
